@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-rose-600 text-white hover:bg-rose-700;
+  }
+
+  .security-card {
+    @apply relative overflow-hidden rounded-2xl transition-all duration-300;
+  }
+
+  .security-icon {
+    @apply relative z-10 transition-transform duration-300 ease-out;
+  }
+
+  .security-content {
+    @apply relative z-10 transition-all duration-300;
+  }
+
+  .security-backdrop {
+    @apply absolute inset-0 transition-opacity duration-300;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r;
+  }
+
+  .animate-shimmer {
+    @apply relative overflow-hidden before:absolute before:inset-0 before:-translate-x-full before:animate-shimmer before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent;
+  }
+}
